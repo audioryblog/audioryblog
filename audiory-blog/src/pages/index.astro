@@ -69,25 +69,21 @@ date: "2026-04-28"
 <!-- ✅ NETLIFY IDENTITY FIXED -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-<script>
-if (window.netlifyIdentity) {
-// 🔥 Initialize Identity (THIS WAS MISSING)
-window.netlifyIdentity.init();
+<script is:inline>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.init();
 
-// 🔥 Handle invite links
-if (window.location.hash.includes("invite_token")) {
-window.netlifyIdentity.open();
-}
+  if (window.location.hash.includes("invite_token")) {
+    window.netlifyIdentity.open();
+  }
 
-// 🔥 Handle password recovery
-if (window.location.hash.includes("recovery_token")) {
-window.netlifyIdentity.open();
-}
+  if (window.location.hash.includes("recovery_token")) {
+    window.netlifyIdentity.open();
+  }
 
-// 🔥 Redirect after login
-window.netlifyIdentity.on("login", () => {
-window.location.href = "/admin/";
-});
+  window.netlifyIdentity.on("login", () => {
+    window.location.href = "/admin/";
+  });
 }
 </script>
 
