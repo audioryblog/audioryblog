@@ -78,6 +78,16 @@ const posts = [
           });
         }
       });
+
+      // 🔥 THIS handles invite links
+      window.netlifyIdentity.on("invite", () => {
+        window.netlifyIdentity.open();
+      });
+
+      // 🔥 THIS handles password recovery
+      window.netlifyIdentity.on("recovery", () => {
+        window.netlifyIdentity.open();
+      });
     }
   </script>
 
