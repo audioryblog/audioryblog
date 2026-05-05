@@ -1,12 +1,70 @@
 ---
+const posts = [
+  {
+    title: "How to Sell Beats Online in 2026",
+    excerpt: "Learn how producers are turning beats into income using platforms like Audiory.",
+    date: "2026-05-05"
+  },
+  {
+    title: "Top 5 Mistakes Beginner Producers Make",
+    excerpt: "Avoid these mistakes if you want to grow faster as a music producer.",
+    date: "2026-05-01"
+  },
+  {
+    title: "How to Get Your First 100 Sales",
+    excerpt: "A simple strategy breakdown for upcoming beatmakers.",
+    date: "2026-04-28"
+  }
+];
 ---
 
 <html>
-  <head>
-    <title>Audiory Blog</title>
-  </head>
-  <body style="background:black;color:white;font-family:sans-serif;">
-    <h1>Welcome to Audiory Blog</h1>
-    <p>Your music, your platform.</p>
-  </body>
+<head>
+  <title>Audiory Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body style="margin:0; background:#0b0b0f; color:white; font-family:Arial, sans-serif;">
+
+  <!-- NAV -->
+  <div style="display:flex; justify-content:space-between; padding:20px 40px; border-bottom:1px solid #1f1f2a;">
+    <h2 style="color:#fff;">Audiory</h2>
+    <div style="color:#aaa;">Blog | Beats | Learn</div>
+  </div>
+
+  <!-- HERO -->
+  <div style="padding:60px 40px; text-align:center;">
+    <h1 style="font-size:42px; margin-bottom:10px;">Audiory Blog</h1>
+    <p style="color:#aaa;">Insights for music producers, artists & beat makers</p>
+  </div>
+
+  <!-- FEATURED -->
+  <div style="padding:0 40px;">
+    <div style="background:#151521; padding:30px; border-radius:12px; margin-bottom:40px;">
+      <h2>🔥 Featured: How to Sell Beats Online in 2026</h2>
+      <p style="color:#aaa;">Learn how producers are building income using modern beat marketplaces.</p>
+    </div>
+  </div>
+
+  <!-- POSTS GRID -->
+  <div style="padding:0 40px;">
+    <h3 style="margin-bottom:20px;">Latest Posts</h3>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;">
+      {posts.map(post => (
+        <div style="background:#151521; padding:20px; border-radius:12px;">
+          <h4>{post.title}</h4>
+          <p style="color:#aaa; font-size:14px;">{post.excerpt}</p>
+          <small style="color:#555;">{post.date}</small>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="margin-top:60px; padding:30px; text-align:center; color:#555; border-top:1px solid #1f1f2a;">
+    © 2026 Audiory. All rights reserved.
+  </div>
+
+</body>
 </html>
